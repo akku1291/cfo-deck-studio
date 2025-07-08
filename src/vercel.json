@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.ceodeckstudio.com"
+        }
+      ],
+      "destination": "https://ceodeckstudio.com/$1",
+      "permanent": true
+    }
+  ]
+}
