@@ -1,63 +1,73 @@
-import React from 'react';
+import React from "react";
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen font-sans bg-gradient-to-br from-blue-50 via-teal-50 to-gray-100 text-gray-800">
-      <header className="bg-white shadow p-10 text-center">
-        <h1 className="text-5xl font-bold text-teal-800">CFO Deck Studio</h1>
-        <p className="text-lg mt-3 text-gray-600">
-          Executive-grade presentations tailored for impact. Impress investors. Align teams. Win decisions.
+    <div className="bg-white text-gray-800 font-sans">
+      {/* Hero Section */}
+      <section className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Presentations That Speak the CFO & CEO’s Language</h1>
+        <p className="text-lg md:text-xl mb-6 max-w-2xl">
+          Built by a team of CAs and CFAs who live and breathe finance — we blend strategy, clarity, and visuals into every boardroom-ready deck.
         </p>
-        <div className="mt-6 flex justify-center gap-4">
-          <a href="https://wa.me/917030623230" target="_blank" rel="noopener noreferrer"
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg shadow">
-            Chat on WhatsApp
-          </a>
-          <a href="https://calendly.com/+971-507693230" target="_blank" rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow">
-            Book a Call
-          </a>
-        </div>
-      </header>
+        <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">Get a Sample</button>
+      </section>
 
-      <section className="p-10 text-center">
-        <h2 className="text-3xl font-semibold mb-6 text-gray-700">Portfolio</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-lg shadow p-4">
-            <img src="https://via.placeholder.com/300x200?text=Investor+Deck" alt="Deck 1" className="rounded mb-2" />
-            <p className="font-medium">Investor Pitch - FinTech</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <img src="https://via.placeholder.com/300x200?text=Board+Update" alt="Deck 2" className="rounded mb-2" />
-            <p className="font-medium">Board Review - FY24 Strategy</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <img src="https://via.placeholder.com/300x200?text=Budget+Deck" alt="Deck 3" className="rounded mb-2" />
-            <p className="font-medium">Annual Budget Presentation</p>
-          </div>
+      {/* Services Section */}
+      <section className="py-20 px-6 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-10">What We Do</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <ServiceCard title="Strategic & Financial Storytelling" />
+          <ServiceCard title="Board Meeting Decks" />
+          <ServiceCard title="M&A / Investor Presentations" />
+          <ServiceCard title="KPI Dashboards & Data Visuals" />
         </div>
       </section>
 
-      <section className="p-10 bg-teal-50 text-center">
-        <h2 className="text-3xl font-semibold mb-6 text-gray-800">Testimonials</h2>
-        <blockquote className="italic max-w-2xl mx-auto text-lg text-gray-700">
-          "Akanksha's decks don’t just look amazing — they win buy-in. Our funding round was a breeze."
-        </blockquote>
-        <p className="mt-2 font-semibold text-teal-700">— CFO, Tech Startup</p>
-
-        <blockquote className="italic mt-10 max-w-2xl mx-auto text-lg text-gray-700">
-          "She turned our data-heavy board update into a clear, confident story. Best money we spent all year."
-        </blockquote>
-        <p className="mt-2 font-semibold text-teal-700">— Group Finance Director, UAE</p>
+      {/* Why Us Section */}
+      <section className="py-20 px-6 bg-gray-100 text-center">
+        <h2 className="text-3xl font-bold mb-6">Why Work With Us</h2>
+        <p className="max-w-2xl mx-auto text-lg">
+          We’re a small team of CAs & CFAs who live and breathe numbers, finance, and visual storytelling. We don’t just “make slides”—we understand exactly what to say, how to say it, and where to say it on the slide to get your board nodding. You bring the data, we bring the clarity.
+        </p>
       </section>
 
-      <footer className="bg-gray-100 text-center p-6 text-sm text-gray-600">
-        © 2025 CFO Deck Studio. Built to impress. <br />
-        <a href="https://wa.me/917030623230" className="text-green-700 underline">WhatsApp</a> | 
-        <a href="https://calendly.com/+971-507693230" className="text-blue-700 underline ml-1">Calendly</a>
-      </footer>
+      {/* Sample Work Section */}
+      <section className="py-20 px-6 bg-white text-center">
+        <h2 className="text-3xl font-bold mb-6">Sample Slides</h2>
+        <p className="mb-6">Coming soon: See examples of real-world decks designed for CFOs and finance leaders.</p>
+        <div className="w-full h-64 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500">
+          [ Slide Previews Placeholder ]
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-6 bg-gray-100 text-center">
+        <h2 className="text-3xl font-bold mb-6">What People Say</h2>
+        <p className="max-w-2xl mx-auto text-lg italic mb-4">“Incredible clarity and polish. Took our raw numbers and turned them into a compelling story.”</p>
+        <p className="text-sm font-medium">– Akanksha, CFO</p>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-6 bg-black text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Let’s Build Your Next Deck</h2>
+        <p className="mb-6">Drop a message or request a sample. I’ll get back to you personally.</p>
+        <a
+          href="https://calendly.com/akku1291/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-white text-black px-6 py-3 rounded-full hover:bg-gray-100 transition"
+        >
+          Book a Call
+        </a>
+      </section>
     </div>
   );
 }
 
-export default App;
+function ServiceCard({ title }) {
+  return (
+    <div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+      <h3 className="text-xl font-semibold">{title}</h3>
+    </div>
+  );
+}
