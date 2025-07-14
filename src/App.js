@@ -9,7 +9,12 @@ export default function App() {
         <p className="text-lg md:text-xl mb-6 max-w-2xl">
           Built by a team of CAs and CFAs who live and breathe finance — we blend strategy, clarity, and visuals into every boardroom-ready deck.
         </p>
-        <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">Get a Sample</button>
+        <a
+          href="mailto:akku.1291@gmail.com?subject=Sample Deck Request&body=Hi,I'd love to receive a sample deck. My email is: [your email here].Thanks!"
+          className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
+        >
+          Get a Sample
+        </a>
       </section>
 
       {/* Services Section */}
@@ -27,7 +32,7 @@ export default function App() {
       <section className="py-20 px-6 bg-gray-100 text-center">
         <h2 className="text-3xl font-bold mb-6">Why Work With Us</h2>
         <p className="max-w-2xl mx-auto text-lg">
-          We’re a small team of CAs & CFAs who live and breathe numbers, finance, and visual storytelling. We don’t just “make slides”—we understand exactly what to say, how to say it, and where to say it on the slide to get your board nodding. You bring the data, we bring the clarity. We skip the fluff. We skip the stock icons. We design with intent.
+          We’re a team of CAs & CFAs who live and breathe numbers, finance, and visual storytelling. We don’t just “make slides”—we understand exactly what to say, how to say it, and where to say it on the slide to get your board nodding. You bring the data, we bring the clarity. We skip the fluff. We skip the stock icons. We design with intent.
         </p>
       </section>
 
@@ -51,11 +56,37 @@ export default function App() {
       <section className="py-20 px-6 bg-black text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Let’s Build Your Next Deck</h2>
         <p className="mb-6">Drop a message or request a sample. I’ll get back to you personally.</p>
+        <form
+          action="mailto:akku.1291@gmail.com"
+          method="POST"
+          encType="text/plain"
+          className="max-w-xl mx-auto"
+        >
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email"
+            required
+            className="w-full px-4 py-2 mb-4 rounded text-black"
+          />
+          <textarea
+            name="Message"
+            placeholder="Your Message"
+            className="w-full px-4 py-2 mb-4 rounded text-black"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-100 transition"
+          >
+            Send
+          </button>
+        </form>
+        <br />
         <a
-          href="https://calendly.com/akku1291/30min"
+          href="https://calendly.com/akku-1291/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-white text-black px-6 py-3 rounded-full hover:bg-gray-100 transition mb-4"
+          className="inline-block bg-white text-black px-6 py-3 rounded-full hover:bg-gray-100 transition mt-4"
         >
           Book a Call
         </a>
@@ -64,10 +95,20 @@ export default function App() {
           href="https://wa.me/917030623230"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition"
+          className="inline-block bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition mt-4"
         >
           Chat on WhatsApp
         </a>
+      </section>
+
+      {/* New Subpages */}
+      <section className="py-20 px-6 bg-white text-center">
+        <h2 className="text-3xl font-bold mb-6">Explore More</h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <SubPageCard title="About Our Team" link="#about" />
+          <SubPageCard title="Design Philosophy" link="#philosophy" />
+          <SubPageCard title="Before & After Slides" link="#before-after" />
+        </div>
       </section>
     </div>
   );
@@ -78,5 +119,13 @@ function ServiceCard({ title }) {
     <div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
     </div>
+  );
+}
+
+function SubPageCard({ title, link }) {
+  return (
+    <a href={link} className="block bg-gray-100 p-6 rounded-xl shadow hover:shadow-md transition">
+      <h4 className="text-lg font-medium">{title}</h4>
+    </a>
   );
 }
