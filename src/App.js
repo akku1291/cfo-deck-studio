@@ -27,7 +27,14 @@ export default function App() {
       <section className="py-20 px-6 bg-gray-100 text-center">
         <h2 className="text-3xl font-bold mb-6">Why Work With Us</h2>
         <p className="max-w-2xl mx-auto text-lg">
-          We’re a small team of CAs & CFAs who live and breathe numbers, finance, and visual storytelling. We don’t just “make slides”—we understand exactly what to say, how to say it, and where to say it on the slide to get your board nodding. You bring the data, we bring the clarity.
+          We’re a team of Chartered Accountants and CFAs who think in numbers and speak the language of boardrooms. From financial modeling to investor storytelling, we know exactly what to highlight, where to dive deep, and how to make your data compelling.Whether it's a board deck, fundraising pitch, or strategy presentation, we blend analytical depth with design clarity — so your message lands.
+
+You bring the data.
+We craft the narrative.
+
+It’s like having a finance brain and a design team in one.
+
+
         </p>
       </section>
 
@@ -44,7 +51,7 @@ export default function App() {
       <section className="py-20 px-6 bg-gray-100 text-center">
         <h2 className="text-3xl font-bold mb-6">What People Say</h2>
         <p className="max-w-2xl mx-auto text-lg italic mb-4">“Incredible clarity and polish. Took our raw numbers and turned them into a compelling story.”</p>
-        <p className="text-sm font-medium">– Akanksha, CFO</p>
+        <p className="text-sm font-medium">– CFO of a Hospitality Company in the UAE</p>
       </section>
 
       {/* Contact Section */}
